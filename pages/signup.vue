@@ -57,7 +57,7 @@
             Sign In
           </button>
           <nuxt-link to="signin">
-            <h2 class="text-blue-800 underline">sigin</h2>
+            <h2 class="text-blue-800 underline">signin</h2>
           </nuxt-link>
         </div>
         <p class="text-center text-red-600">{{ error }}</p>
