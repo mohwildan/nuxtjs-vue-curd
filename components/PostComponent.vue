@@ -32,7 +32,9 @@ export default {
   },
 
   async fetch() {
-    const user = await this.$axios.get('/post')
+    const user = await this.$axios.get(
+      'https://nest-heroku0.herokuapp.com/post'
+    )
     this.posts = user.data.posts
   },
   computed: {
@@ -48,7 +50,7 @@ export default {
       this.$store.commit('loading', {
         loading: true,
       })
-      await this.$axios.delete('/post/' + id)
+      await this.$axios.delete('https://nest-heroku0.herokuapp.com/post/' + id)
       await this.$nuxt.refresh()
       this.$store.commit('loading', {
         loading: false,

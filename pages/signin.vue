@@ -34,8 +34,12 @@
           >
             Sign In
           </button>
+          <nuxt-link to="signup">
+            <h2 class="text-blue-800 underline">signup</h2>
+          </nuxt-link>
         </div>
         <p class="text-center text-red-600">{{ error }}</p>
+        <div></div>
       </form>
     </div>
   </div>
@@ -50,8 +54,6 @@ export default {
       email: '',
       password: '',
       error: '',
-      userName: '',
-      userEmail: '',
     }
   },
 
@@ -59,7 +61,7 @@ export default {
     async handlerSubmit() {
       try {
         const res = await this.$axios.post(
-          'auth/signin',
+          'https://nest-heroku0.herokuapp.com/auth/signin',
           {
             email: this.email,
             password: this.password,

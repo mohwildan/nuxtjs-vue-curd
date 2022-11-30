@@ -34,7 +34,7 @@ export default {
       this.$store.commit('loading', {
         loading: true,
       })
-      await this.$axios.post('/post', {
+      await this.$axios.post('https://nest-heroku0.herokuapp.com/post', {
         email: this.user.email,
         name: this.user.name,
         userName: this.user.userName,

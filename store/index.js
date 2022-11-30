@@ -1,6 +1,7 @@
 export const state = () => ({
   token: '',
   loading: false,
+  user: null 
 })
 
 export const mutations = {
@@ -9,5 +10,8 @@ export const mutations = {
   },
   loading(state, payload) {
     state.loading = payload.loading
+  },
+  user(state, payload) {
+    state.user = payload.user
   },
 }
